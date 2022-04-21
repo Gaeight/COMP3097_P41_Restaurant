@@ -1,4 +1,5 @@
 import { Redirect, Route } from 'react-router-dom';
+
 import {
   IonApp,
   IonIcon,
@@ -13,6 +14,7 @@ import { IonReactRouter } from '@ionic/react-router';
 import { searchCircleOutline, accessibilityOutline, homeOutline } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import AboutUs from './pages/AboutUs';
+import AddRest from './pages/AddRest.page';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -48,6 +50,9 @@ const App: React.FC = () => (
           </Route>
           <Route exact path="/">
             <Redirect to="/restaurants" />
+          </Route>
+          <Route path="/addRest">
+            <AddRest />
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
