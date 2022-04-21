@@ -12,8 +12,6 @@ import {
 import { IonReactRouter } from '@ionic/react-router';
 import { searchCircleOutline, accessibilityOutline, homeOutline } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
-import Tab2 from './pages/Tab2';
-import Tab3 from './pages/Tab3';
 import AboutUs from './pages/AboutUs';
 
 /* Core CSS required for Ionic components to work properly */
@@ -48,11 +46,8 @@ const App: React.FC = () => (
           <Route exact path="/about">
             <AboutUs />
           </Route>
-          <Route path="/search">
-            <Tab3 />
-          </Route>
           <Route exact path="/">
-            <Redirect to="/tab1" />
+            <Redirect to="/restaurants" />
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
@@ -63,10 +58,6 @@ const App: React.FC = () => (
           <IonTabButton tab="tab2" href="/about">
             <IonIcon icon={accessibilityOutline} />
             <IonLabel>About</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab3" href="/search">
-            <IonIcon icon={searchCircleOutline} />
-            <IonLabel>Search</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
