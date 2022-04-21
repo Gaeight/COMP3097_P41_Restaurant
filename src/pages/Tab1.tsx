@@ -1,8 +1,9 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+import React, { useState } from 'react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonSearchbar, IonList, IonItem, IonLabel, IonInput, IonToggle, IonRadio, IonCheckbox, IonItemSliding, IonItemOption, IonItemOptions } from '@ionic/react';
 import './Tab1.css';
 
 const Tab1: React.FC = () => {
+  const [searchText, setSearchText] = useState('');
   return (
     <IonPage>
       <IonHeader>
@@ -11,12 +12,24 @@ const Tab1: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Restaurants</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer name="Restaurants page" />
+        <IonList>
+          <IonSearchbar value={searchText} onIonChange={e => setSearchText(e.detail.value!)}></IonSearchbar>
+          <IonItem>
+            <IonLabel>Restaurant 1</IonLabel>
+          </IonItem>
+          <IonItem>
+            <IonLabel>Restaurant 2</IonLabel>
+          </IonItem>
+          <IonItem>
+            <IonLabel>Restaurant 3</IonLabel>
+          </IonItem>
+          <IonItem>
+            <IonLabel>Restaurant 4</IonLabel>
+          </IonItem>
+          <IonItem>
+            <IonLabel>Restaurant 5</IonLabel>
+          </IonItem>
+        </IonList>
       </IonContent>
     </IonPage>
   );
