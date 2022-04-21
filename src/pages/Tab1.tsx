@@ -21,6 +21,7 @@ const Tab1: React.FC = () => {
           </IonItem>
 
         </IonList>
+        <IonButton expand="block" href='/addRest'>Add Restaurant</IonButton>
       </IonContent>
     </IonPage>
   );
