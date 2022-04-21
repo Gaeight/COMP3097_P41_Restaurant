@@ -19,16 +19,16 @@ const AboutUs: React.FC = () => {
                             <IonLabel>101247765</IonLabel>
                         </IonItem>
                         <IonItem class='ion-text-center' color="white">
-                            <IonLabel>Gabe</IonLabel>
-                            <IonLabel>101247765</IonLabel>
+                            <IonLabel>Gabrel Silva</IonLabel>
+                            <IonLabel>101245037</IonLabel>
                         </IonItem>
                         <IonItem class='ion-text-center' color="white">
-                            <IonLabel>Ruzzel</IonLabel>
-                            <IonLabel>101247765</IonLabel>
+                            <IonLabel>Ruzzel Orejola</IonLabel>
+                            <IonLabel>101247477</IonLabel>
                         </IonItem>
                         <IonItem class='ion-text-center' color="white">
-                            <IonLabel>John Michael</IonLabel>
-                            <IonLabel>101247765</IonLabel>
+                            <IonLabel>John Michael De Guzman</IonLabel>
+                            <IonLabel>101248107</IonLabel>
                         </IonItem>
                     </IonList>
                 </IonCard>

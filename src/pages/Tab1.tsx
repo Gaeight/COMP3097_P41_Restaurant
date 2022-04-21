@@ -16,8 +16,8 @@ const Tab1: React.FC = () => {
           <IonSearchbar value={searchText} onIonChange={e => setSearchText(e.detail.value!)}></IonSearchbar>
 
           <IonItem>
-            <IonLabel>Restaurant</IonLabel>
-            <IonButton color="medium">View</IonButton>
+            <IonLabel>Restaurant 1</IonLabel>
+            <IonButton color="medium" href='/details'>Details</IonButton>
           </IonItem>
 
         </IonList>

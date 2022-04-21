@@ -1,58 +1,58 @@
-import React, {useState} from 'react'
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar,IonItem, IonInput, IonLabel, IonButton} from '@ionic/react';
+import React, { useState } from 'react'
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonItem, IonInput, IonLabel, IonButton } from '@ionic/react';
 
 
 const AddRest: React.FC = () => {
 
 
   const [input, setInput] = useState({
-    name:'',
-    address:'',
-    phone:'',
-    description:''
+    name: '',
+    address: '',
+    phone: '',
+    description: ''
   })
- 
-  function handleChange(e: { target: { name: any; value: any; }; }){
-    const {name, value} = e.target;
+
+  function handleChange(e: { target: { name: any; value: any; }; }) {
+    const { name, value } = e.target;
 
     setInput(prevInput => {
       return {
         ...prevInput,
-        [name]:value
+        [name]: value
       }
     })
   }
-    return (
-      <IonPage>
+  return (
+    <IonPage>
       <IonHeader>
         <IonToolbar>
           <IonTitle>Add</IonTitle>
         </IonToolbar>
       </IonHeader>
-      
+
       <IonContent fullscreen>
         <form>
           <IonItem lines="full">
             <IonLabel position='floating'>Name</IonLabel>
-            <IonInput  value={input.name} name="name" type="text"/>
+            <IonInput value={input.name} name="name" type="text" />
           </IonItem>
           <IonItem lines="full">
-            <IonLabel position='floating'>address</IonLabel>
-            <IonInput   value={input.address} name="address" type="text" onIonChange={e => handleChange}></IonInput>
+            <IonLabel position='floating'>Address</IonLabel>
+            <IonInput value={input.address} name="address" type="text" onIonChange={e => handleChange}></IonInput>
           </IonItem>
           <IonItem lines="full">
-            <IonLabel position='floating'>phone</IonLabel>
-            <IonInput  value={input.phone} name="phone" type="text" onIonChange={e => handleChange}></IonInput>
+            <IonLabel position='floating'>Phone</IonLabel>
+            <IonInput value={input.phone} name="phone" type="text" onIonChange={e => handleChange}></IonInput>
           </IonItem>
           <IonItem lines="full">
-            <IonLabel position='floating'>description</IonLabel>
-            <IonInput   value={input.description} name="description" type="text" onIonChange={e => handleChange}></IonInput>
+            <IonLabel position='floating'>Description</IonLabel>
+            <IonInput value={input.description} name="description" type="text" onIonChange={e => handleChange}></IonInput>
           </IonItem>
         </form>
-       
+
       </IonContent>
     </IonPage>
-    );
+  );
 };
 
 export default AddRest;
